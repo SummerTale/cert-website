@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import Image from "next/image";
 import { FiFacebook, FiTwitter, FiLinkedin, FiYoutube } from "react-icons/fi";
 
 export default function Header() {
@@ -13,7 +14,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between h-23">
         {/* Logo */}
         <Link href="/" className="text-2xl font-bold text-primary">
-          <img src="/logo.png" alt="Agile Logo" className="h-15" />
+          <Image src="/logo.png" alt="Agile Logo" className="h-15" />
         </Link>
 
           {/* Navigation */}

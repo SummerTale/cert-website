@@ -25,7 +25,7 @@ export default function Newsletter() {
               Thank you for subscribing!
             </h3>
             <p className="mt-2 text-zinc-600">
-              You'll now receive updates on workshops, courses, and industry insights.
+              You will now receive updates on workshops, courses, and industry insights.
             </p>
           </div>
         </div>

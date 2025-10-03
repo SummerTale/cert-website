@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { FiFacebook, FiTwitter, FiLinkedin, FiYoutube } from "react-icons/fi";
 
 export default function Footer() {
@@ -13,7 +14,7 @@ export default function Footer() {
         <div>
           <div className="mb-4">
             <Link href="/" className="text-2xl font-bold text-primary">
-              <img src="/logo.png" alt="Agile Logo" className="h-12" />
+              <Image src="/logo.png" alt="Agile Logo" className="h-12" />
             </Link>
           </div>
           <p className="text-white/80 text-16px leading-relaxed font-normal mt-4">
