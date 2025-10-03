@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import Image from "next/image";
 import { FiFacebook, FiTwitter, FiLinkedin, FiYoutube } from "react-icons/fi";
 
 export default function Header() {

@@ -24,7 +24,7 @@ const testimonials = [
   },
   {
     quote:
-      "The corporate training program exceeded our expectations. Our teams' productivity and collaboration improved dramatically after the sessions.",
+      "The corporate training program exceeded our expectations. Our teams productivity and collaboration improved dramatically after the sessions.",
     name: "Emily Rodriguez",
     role: "HR Director",
     company: "Global Solutions",
@@ -32,7 +32,7 @@ const testimonials = [
   },
   {
     quote:
-      "The comprehensive approach to skill development and the personalized feedback made all the difference in our team's agile transformation.",
+      "The comprehensive approach to skill development and the personalized feedback made all the difference in our teams agile transformation.",
     name: "David Park",
     role: "Scrum Master",
     company: "Agile Dynamics",
