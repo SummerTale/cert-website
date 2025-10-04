@@ -14,7 +14,7 @@ export default function Footer() {
         <div>
           <div className="mb-4">
             <Link href="/" className="text-2xl font-bold text-primary">
-              <Image src="/logo.png" alt="Agile Logo" className="h-12" />
+              <Image src="/logo.png" alt="Agile Logo" width={120} height={48} className="h-12 w-auto" />
             </Link>
           </div>
           <p className="text-white/80 text-16px leading-relaxed font-normal mt-4">

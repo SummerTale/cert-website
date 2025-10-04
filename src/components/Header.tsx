@@ -14,7 +14,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between h-23">
         {/* Logo */}
         <Link href="/" className="text-2xl font-bold text-primary">
-          <Image src="/logo.png" alt="Agile Logo" className="h-15" />
+          <Image src="/logo.png" alt="Agile Logo" width={120} height={48} className="h-15 w-auto" />
         </Link>
 
           {/* Navigation */}
