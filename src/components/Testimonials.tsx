@@ -60,7 +60,7 @@ export default function Testimonials() {
       </p>
 
       {/* Testimonial Card */}
-      <div className="relative max-w-2xl mx-auto bg-white rounded-3xl shadow-lg p-8">
+      <div className="relative max-w-4xl mx-auto bg-white rounded-3xl shadow-lg p-8">
         {/* Quote Icon */}
         <LuQuote className="text-5xl text-gray-700 opacity-80 mx-auto mb-6" />
 

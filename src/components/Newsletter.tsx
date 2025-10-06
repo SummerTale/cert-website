@@ -61,7 +61,7 @@ export default function Newsletter() {
               placeholder="Enter your name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full md:w-100 h-10 px-4 bg-slate-40/70 rounded-2xl outline-transparent text-sm text-gray-900 placeholder-zinc-600"
+              className="w-full md:w-120 h-10 px-4 bg-slate-100/70 rounded-2xl outline-transparent text-sm text-gray-900 placeholder-zinc-600"
               required
             />
             <input
@@ -69,7 +69,7 @@ export default function Newsletter() {
               placeholder="Enter your email address"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full md:w-100 h-10 px-4 bg-slate-40/70 rounded-2xl outline-transparent text-sm text-gray-900 placeholder-zinc-600"
+              className="w-full md:w-120 h-10 px-4 bg-slate-100/70 rounded-2xl outline-transparent text-sm text-gray-900 placeholder-zinc-600"
               required
             />
 

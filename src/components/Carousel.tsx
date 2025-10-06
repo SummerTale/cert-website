@@ -56,7 +56,7 @@ export default function HeroCarousel() {
     <section className="relative h-[582px] bg-gradient-to-br from-violet-50 via-fuchsia-50 to-cyan-50 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-violet-400/10 via-fuchsia-400/10 to-cyan-400/10" />
 
-      <div className="relative max-w-5xl mx-auto px-10 py-18">
+      <div className="relative max-w-4xl mx-auto px-10 py-18">
         {/* Card Container */}
         <div className="relative w-full h-[400px] bg-white/90 rounded-3xl shadow-[0_0_26px_rgba(139,92,246,0.46)] overflow-hidden">
           {/* Background Image */}
@@ -75,7 +75,7 @@ export default function HeroCarousel() {
             <h3 className="text-base font-normal leading-normal">
               {slides[current].title}
             </h3>
-            <p className="text-lg opacity-90 leading-7">
+            <p className="text-md opacity-90 leading-7">
               {slides[current].subtitle}
             </p>
             <button className="mt-2 w-auto h-10 px-6 bg-gradient-to-r from-white to-gray-100 text-gray-900 text-sm font-medium rounded-full">

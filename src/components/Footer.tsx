@@ -8,25 +8,28 @@ export default function Footer() {
   return (
     <footer className="bg-gradient-to-br from-gray-900 via-violet-900 to-cyan-900 text-white relative">
       {/* Main Content */}
-      <div className="relative max-w-6xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="relative max-w-7xl mx-auto px-2 py-8 grid grid-cols-1 md:grid-cols-2 gap-12">
         
         {/* Left: Logo + Description */}
         <div>
-          <div className="mb-4">
+          <div className="mb-6">
             <Link href="/" className="text-2xl font-bold text-primary">
               <Image src="/logo.png" alt="Agile Logo" width={120} height={48} className="h-12 w-auto" />
             </Link>
           </div>
-          <p className="text-white/80 text-16px leading-relaxed font-normal mt-4">
-            Empowering individuals and organizations through comprehensive
-            assessment, training, and coaching solutions. Transform your
-            potential into performance.
-          </p>
+          <div className="max-w-[80%] md:max-w-[80%]">
+            <p className="text-white/80 text-16px leading-relaxed font-normal mt-4">
+              Empowering individuals and organizations through comprehensive
+              assessment, training, and coaching solutions. Transform your
+              potential into performance.
+            </p>
+          </div>
         </div>
 
+          <div className="grid grid-cols-2 gap-12 md:gap-20">
           {/* Related Links */}
           <div>
-            <h3 className="text-20px font-medium mb-4">Related Links</h3>
+            <h3 className="text-lg font-medium mb-6">Related Links</h3>
             <ul className="space-y-2 text-white/80 text-16px">
               <li><Link href="/about" className="hover:text-white">About us</Link></li>
               <li><Link href="/contact" className="hover:text-white">Contact us</Link></li>
@@ -37,18 +40,27 @@ export default function Footer() {
 
           {/* Follow Us */}
           <div>
-            <h3 className="text-20px font-medium mb-4">Follow us</h3>
-            <div className="flex space-x-5 text-white/70 w-2 h-2">
-              <Link href="#" className="hover:text-white"><FiFacebook /></Link>
-              <Link href="#" className="hover:text-white"><FiTwitter /></Link>
-              <Link href="#" className="hover:text-white"><FiLinkedin /></Link>
-              <Link href="#" className="hover:text-white"><FiYoutube /></Link>
+            <h3 className="text-lg font-medium mb-6">Follow us</h3>
+            <div className="flex space-x-8 text-white/70 w-10 h-10">
+              <Link href="https://facebook.com" target="_blank" className="hover:text-white">
+                  <FiFacebook />
+                </Link>
+                <Link href="https://twitter.com" target="_blank" className="hover:text-white">
+                  <FiTwitter />
+                </Link>
+                <Link href="https://linkedin.com" target="_blank" className="hover:text-white">
+                  <FiLinkedin />
+                </Link>
+                <Link href="https://youtube.com" target="_blank" className="hover:text-white">
+                  <FiYoutube />
+                </Link>
             </div>
           </div>
         </div>
+        </div>
 
       {/* Bottom Bar */}
-      <div className="max-w-3xl mx-auto border-t border-white/20 mt-8 pt-6 pb-12">
+      <div className="max-w-6xl mx-auto border-t border-white/20 mt-1 pt-4 pb-6">
         <p className="text-center text-sm text-white/60 py-4">
           © 2025 Agile. All rights reserved.
         </p>
