@@ -35,7 +35,7 @@ export default function AboutUs() {
   return (
     <section className="py-16 bg-gradient-to-r from-violet-50 to-cyan-50 text-center">
       {/* Heading */}
-      <h2 className="text-base font-semibold text-blue-600/70 mb-8">About Us</h2>
+      <h2 className="text-xl font-semibold text-blue-600/70 mb-8">About Us</h2>
 
       {/* Buttons */}
       <div className="flex justify-center gap-4 mb-10">
@@ -46,8 +46,8 @@ export default function AboutUs() {
             className={`w-36 h-9 px-4 py-2 rounded-2xl text-sm font-medium transition 
               ${
                 active === key
-                  ? "bg-gradient-to-r from-orange-500 to-amber-600 text-white"
-                  : "border border-orange-300 text-orange-700 hover:bg-orange-50 hover:-translate-y-2 hover:shadow-lg"
+                  ? "bg-gradient-to-r from-violet-600 to-cyan-600 opacity-80 text-white"
+                  : "border border-violet-600 text-violet-600 hover:bg-violet-100 hover:-translate-y-2 hover:shadow-lg"
               }`}
           >
             {sections[key as keyof typeof sections].title}

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState, useRef } from "react";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { FiFacebook, FiTwitter, FiLinkedin, FiYoutube } from "react-icons/fi";
 
 
@@ -10,6 +11,8 @@ export default function Header() {
   const [trainingOpen, setTrainingOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const pathname = usePathname(); // ✅ detects the current route
+  const isActive = (path: string) => pathname.startsWith(path);
 
   const handleMouseEnter = () => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
@@ -32,7 +35,12 @@ export default function Header() {
 
           {/* Navigation */}
         <nav className="hidden md:flex space-x-8 font-medium text-gray-700">
-          <Link href="/assessment">
+          <Link href="/assessment"
+          className={`transition-colors ${
+              isActive("/assessment")
+                ? "text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-cyan-500 font-semibold"
+                : "hover:text-primary"
+            }`}>
             Assessment
           </Link>
           {/* Training Dropdown */}
@@ -76,10 +84,20 @@ export default function Header() {
             )}
           </div>
 
-            <Link href="/coaching">
+            <Link href="/coaching"
+            className={`transition-colors ${
+              isActive("/coaching")
+                ? "text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-cyan-500 font-semibold"
+                : "hover:text-primary"
+            }`}>
             Coaching
           </Link>
-          <Link href="/resources">
+          <Link href="/resources"
+          className={`transition-colors ${
+              isActive("/resources")
+                ? "text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-cyan-500 font-semibold"
+                : "hover:text-primary"
+            }`}>
             Resources
           </Link>
         </nav>
@@ -107,7 +125,6 @@ export default function Header() {
           </button>
 
           {/* CTA */}
-            <div className="flex flex-col items-center space-y-2">
               <Link
                 href="/courses"
                 className="bg-gradient-to-r from-violet-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-medium"
@@ -115,7 +132,8 @@ export default function Header() {
                 View Courses
               </Link>
               {/* Social Media Icons */}
-              <div className="flex items-center gap-3 text-gray-700">
+              <div className=" flex gap-3 text-gray-700">
+                |
                 <Link href="https://facebook.com" target="_blank">
                   <FiFacebook />
                 </Link>
@@ -129,7 +147,6 @@ export default function Header() {
                   <FiYoutube />
                 </Link>
               </div>
-            </div>
         </div>
 
         
