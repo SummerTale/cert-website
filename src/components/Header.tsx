@@ -11,7 +11,7 @@ export default function Header() {
   const [trainingOpen, setTrainingOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
-  const pathname = usePathname(); // ✅ detects the current route
+  const pathname = usePathname();
   const isActive = (path: string) => pathname.startsWith(path);
 
   const handleMouseEnter = () => {
@@ -26,7 +26,7 @@ export default function Header() {
   };
 
   return (
-    <header className="shadow-sm fixed w-full top-0 z-50 bg-white/40 backdrop-blur-sm">
+    <header className="shadow-sm fixed w-full top-0 z-50 bg-white/40 backdrop-blur-xs">
       <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between h-23">
         {/* Logo */}
         <Link href="/" className="text-2xl font-bold text-primary">
@@ -127,7 +127,7 @@ export default function Header() {
           {/* CTA */}
               <Link
                 href="/courses"
-                className="bg-gradient-to-r from-violet-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-medium"
+                className="bg-gradient-to-r from-violet-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-medium opacity-90 hover:opacity-100 transition"
               >
                 View Courses
               </Link>

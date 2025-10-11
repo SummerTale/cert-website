@@ -1,148 +1,254 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import Image from "next/image";
+import { IoMdCheckmarkCircleOutline } from "react-icons/io";
+import { BsBarChart, BsPeople, BsPersonBadge, BsDiagram3, BsClipboardCheck, BsPersonGear } from "react-icons/bs";
+import { LuUser, LuUsers, LuBriefcase, LuCode, LuTarget, LuBuilding2 } from "react-icons/lu";
 
 export default function AssessmentPage() {
   return (
     <>
-        <Header />
-        <main className="max-w-4xl mx-auto p-6 space-y-6">
-      <div className="flex items-center justify-between mb-6">
-        <h1 className="text-3xl font-bold">Maturity Assessment</h1>
-        <Link
-          href="/contact"
-          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
-        >
-          Get in Touch
-        </Link>
-      </div>
+      <Header />
+        <main className="min-h-screen bg-gradient-to-br from-violet-50 to-cyan-50 text-gray-800">
+      {/* HERO SECTION */}
+      <section className="pt-10 pb-5 text-center">
+        <div className="max-w-2xl mx-auto">
+          <div className="relative rounded-3xl overflow-hidden shadow-lg">
+            <Image
+              src="/assessment-dashboard.jpeg"
+              alt="Comprehensive Assessment Process"
+              width={1000}
+              height={600}
+              className="w-full h-auto object-cover"
+            />
+            {/* Overlay */}
+            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-[90%] md:w-[90%] bg-violet-500/10 backdrop-blur-lg border border-white/20 rounded-3xl px-6 py-4 shadow-lg text-white text-center">
+              <h2 className="text-lg md:text-xl font-semibold mb-1">
+                Comprehensive Assessment Process
+              </h2>
+              <p className="text-sm md:text-base text-white/80">
+                Data-driven insights for your agile transformation journey
+              </p>
+            </div>
+          </div>
 
-
-      <section>
-        <h2 className="text-xl font-semibold mt-4 mb-2">Why Assessment?</h2>
-        <p>
-          Today, more and more companies are adopting iterative software design
-          methodologies like Agile. Whether you are just starting on this journey
-          or if you already have adopted many Agile techniques, it’s vitally
-          important to first understand where you are so you know what you need
-          to do. As we have done for so many other companies, Apex can be your
-          partner in assessing your current capability, to help remediate those
-          areas needing correction, and to create a plan for upgrading skills on
-          your Agile journey.
-        </p>
-        <p className="mt-2">
-          While you may find a number of skill surveys online, Apex offers six
-          comprehensive Agile skill assessments to pinpoint your current
-          capabilities. We drew upon our extensive background in software
-          development to create, from scratch, assessments that reflect actual
-          business environments. Following your assessment, Apex will work with
-          you to provide both individualized and customized coaching; Apex
-          complements our customized training with a number of
-          certification-oriented training programs.
-        </p>
-        <p className="mt-2">
-          The Apex assessments contain both prescriptive and proscriptive components. 
-          We can recognize those patterns and behaviors in your organization that 
-          have you on the right track to improving your agility. As experts in 
-          agile software development with decades of industry experience in business 
-          like yours, we can identify those behaviors that you will want to build 
-          upon. Equally important, our experience as developers and leaders within 
-          the software industry will allow us to recognize other patterns and 
-          behaviors that are detracting from your business and development agility.
-
-        </p>
+          <div className="mt-6">
+            <Link
+              href="/contact"
+              className="bg-gradient-to-r from-violet-500 to-cyan-500 text-white px-7 py-3 rounded-full text-sm font-medium shadow opacity-90 hover:opacity-100 transition"
+            >
+              Contact Us
+            </Link>
+          </div>
+        </div>
       </section>
 
-      <section>
-        <h2 className="text-xl font-semibold mt-4 mb-2">Types of Assessments Offered</h2>
-        <ul className="list-disc list-inside space-y-2">
-          <li>
-            <strong>Leadership Assessment:</strong> The effectiveness of Agile development 
-            efforts will be either magnified or diminished by your organization’s leaders. 
-            The Apex leadership assessment quantitatively assesses the skills and capabilities 
-            of your leadership team. As outlined in the Agile Manifesto, the following 
-            principles are of paramount importance to leaders. First, producing value: does 
-            leadership recognize that the production of value over the production of features? 
-            Second, encouraging change: does leadership not only welcome change, and not only 
-            encourage change, but actually reward change? And third, deliver frequently: does 
-            leadership guide the organization to processes conducive to continuous improvement 
-            and delivery? Apex’s leadership assessment comprehensively surveys leadership 
-            skill in your organization, and it produces recommendations to get leadership on 
-            the right track to agility.
-          </li>
-          <li>
-            <strong>Organization Assessment:</strong> As important as Agile is to your software 
-            development teams, many of the same principles apply to your organization. The Apex 
-            Organization Assessment will measure your current capabilities as an Agile 
-            organization. We will identify those areas where you are on the right track as well 
-            as those where you are following practices that are counterproductive. Like a tried 
-            and true family recipe, we have distilled our decades of experience in the software 
-            industry to create a comprehensive assessment of software development practices. 
-            Among others metrics, we assess the following key capabilities: value: do each your 
-            product releases produce recognizable and useful value for the customer; openness 
-            to change: are your organizations receptive and encouraging of changing 
-            requirements, both early and late in the product cycle; and frequent deliveries 
-            via a continuous improvement and delivery pipeline.
-          </li>
-          <li>
-            <strong>Portfolio Assessment:</strong> Rarely does a company produce a single 
-            product or feature that is divorced from other cooperating products. In an 
-            organization with multiple and simultaneous development efforts, a siloed approach 
-            to product development becomes counterproductive. Do your product teams operate 
-            independently or is there a cooperative spirit aligning your goals? Is progress 
-            gated by milestones and measured by the number of tasks completed? Many of the 
-            same techniques you apply to iterative software development also apply to 
-            portfolio management. Our portfolio assessment ascertains where you sit on an 
-            Agile spectrum and more importantly, what practices can you adopt that will bring 
-            value, openness to change, and improved delivery to your product portfolio.
-          </li>
-          <li>
-            <strong>Program Assessment:</strong> The Apex program assessment evaluates how 
-            well your program development strategy aligns with your product portfolio. In 
-            an organization with multiple simultaneous development streams, cooperation and 
-            good intentions alone will not produce intended results. Apex measures the 
-            engagement of program stakeholders and analyzes strategies for predictability 
-            and problem resolution. Apex looks at program planning - is it synchronized with 
-            the other programs in your enterprise portfolio? The Apex program assessment 
-            measures the propensity of your program to exist cooperatively within the 
-            portfolio and deliver value while being open to change.
+      {/* WHY ASSESSMENT */}
+      <section className="py-12">
+        <div className="max-w-4xl mx-auto bg-white/90 rounded-3xl p-10 hover:shadow-md hover:-translate-y-1 transition">
+          <h3 className="text-center text-xl md:text-xl font-semibold mb-8 text-blue-600/70">
+            Why Assessment?
+          </h3>
+          <p className="text-gray-700 mb-6 max-w-4xl mx-auto leading-relaxed">
+            In today&apos;s rapidly evolving business landscape, organizations need to understand their current agile maturity to make informed decisions about their transformation journey. Our comprehensive assessments provide you with:
+          </p>
 
-          </li>
-          <li>
-            <strong>Team Assessment:</strong> There are two important considerations. 
-            First, there is no perfect team environment. Second, creating an environment 
-            where teams can thrive takes a lot of work. The Apex Team Assessment looks at 
-            the makeup and dynamics of an individual agile team. We ascertain to what degree 
-            has the team jelled or what obstacles may be preventing that from occurring. We 
-            look at the team dynamics: how much trust is there between team members? Is 
-            there a team culture, and if so, is the culture beneficial to, or detrimental to, 
-            the team’s success? Does the team feel empowered to deliver great products? 
-            Apex’s decades of experience in Agile organizations allows us to recognize and 
-            assess those aspects of teamwork that encourage producing value, being open to 
-            change, and allow for continuous improvement and delivery.
-          </li>
-          <li>
-            <strong>Individual Role/Talent Assessment:</strong> Apex in-house experts are not 
-            just experts in the Agile development methodology, but we have earned that 
-            expertise from decades of experience in multiple software industries. We know 
-            individuals like your key contributors because we have also been key contributors. 
-            Drawing from deep domain expertise, Apex can assess the capabilities of key 
-            individuals within your organization. The core Agile principles of delivering 
-            value, openness to change, and improving delivery represent transformative skills 
-            and behavior. Our assessments first measures where your key contributors are on an 
-            Agile spectrum. In addition, the assessment produces concrete recommendations for 
-            help them achieve excellence.
-          </li>
-        </ul>
+          {/* Features */}
+          <div className="grid md:grid-cols-2 gap-x-5 gap-y-3">
+            <div className="flex items-start gap-3">
+              <IoMdCheckmarkCircleOutline className="text-green-500 w-6 h-6 mt-1 flex-shrink-0" />
+              <div>
+                <h4 className="font-semibold text-gray-900 text-base mb-1">
+                  Clear Baseline Understanding
+                </h4>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Get an objective view of your current agile practices and identify strengths and improvement areas.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <IoMdCheckmarkCircleOutline className="text-green-500 w-6 h-6 mt-1 flex-shrink-0" />
+              <div>
+                <h4 className="font-semibold text-gray-900 text-base mb-1">
+                  Data-Driven Decisions
+                </h4>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Make informed investment decisions based on comprehensive analysis and benchmarking.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <IoMdCheckmarkCircleOutline className="text-green-500 w-6 h-6 mt-1 flex-shrink-0" />
+              <div>
+                <h4 className="font-semibold text-gray-900 text-base mb-1">
+                  Tailored Improvement Roadmap
+                </h4>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Receive customized recommendations and prioritized action plans for your transformation.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <IoMdCheckmarkCircleOutline className="text-green-500 w-6 h-6 mt-1 flex-shrink-0" />
+              <div>
+                <h4 className="font-semibold text-gray-900 text-base mb-1">
+                  Risk Mitigation
+                </h4>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Identify potential obstacles and challenges before they impact your transformation success.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Closing Paragraph */}
+          <p className="mt-8 text-gray-900 leading-relaxed">
+            Whether you&apos;re just starting your agile journey or looking to scale existing practices, our assessments provide the insights you need to accelerate your transformation with confidence.
+          </p>
+        </div>
       </section>
-      <Link href="/contact">
-        <button className="bg-blue-600 text-white px-4 py-2 rounded">
-          Get in Touch
-        </button>
-      </Link>
 
+      {/* TYPES OF ASSESSMENT */}
+      <section className="py-20">
+        <div className="max-w-6xl mx-auto text-center">
+          <h3 className="text-lg md:text-xl font-semibold text-blue-600/70 mb-3">
+            What Are The Different Types of Assessment?
+          </h3>
+          <p className="text-gray-600 max-w-3xl mx-auto mb-12 text-md">
+            We offer comprehensive assessments tailored to different organizational levels and needs.
+            Each assessment is designed to provide specific insights and actionable recommendations.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Leadership Assessment",
+                description: "Evaluate leadership capabilities and identify areas for agile leadership development.",
+                icon: <LuTarget className="text-white w-6 h-6" />,
+                points: [
+                  "360-degree feedback",
+                  "Leadership compotency mapping",
+                  "Development roadmap",
+                ],
+              },
+              {
+                title: "Organization Assessment",
+                description: "Comprehensive evaluation of organizational agility and transformation readiness.",
+                icon: <LuBuilding2 className="text-white w-6 h-6" />,
+                points: [
+                  "Cultural assessment",
+                  "Process maturity evaluation",
+                  "Change readiness analysis",
+                ],
+              },
+              {
+                title: "Portfolio Assessment",
+                description: "Strategic assessment of portfolio management practices and alignment.",
+                icon: <LuBriefcase className="text-white w-6 h-6" />,
+                points: [
+                  "Portfolio alignment review",
+                  "Value stream mapping",
+                  "Investment optimization",
+                ],
+              },
+              {
+                title: "Program Assessment",
+                  description: "Evaluate program-level agile practices and coordination mechanisms.",
+                icon: <LuCode className="text-white w-6 h-6" />,
+                points: [
+                  "Cross-team coordination",
+                  "Dependency management",
+                  "Scaling framework assessment",
+                ],
+              },
+              {
+                title: "Team Assessment",
+                description: "Deep dive into team dynamics, practices, and performance metrics.",
+                icon: <LuUsers className="text-white w-6 h-6" />,
+                points: [
+                  "Team health check",
+                  "Velocity analysis",
+                  "Collaboration assessment",
+                ],
+              },
+              {
+                title: "Individual Talent / Role Assessment",
+                description: "Personal agile competency evaluation and career development planning.",
+                icon: <LuUser className="text-white w-6 h-6" />,
+                points: [
+                  "Skill-gap analysis",
+                  "Role-specific evaluation",
+                  "Personal development plan",
+                ],
+              },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="bg-white rounded-3xl shadow-md p-8 text-left hover:-translate-y-1 transition-transform duration-300"
+              >
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-12 h-12 flex items-center justify-center bg-gradient-to-br from-violet-500 to-cyan-500 rounded-full mb-4">
+                    {item.icon}
+                  </div>
+                  <h4 className="font-medium text-md text-gray-900 mb-3">
+                    {item.title}
+                  </h4>
+                </div>
+                <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+                  {item.description}
+                </p>
+                <ul className="space-y-1">
+                  {item.points.map((p, idx) => (
+                    <li key={idx} className="flex items-start text-gray-600 text-sm">
+                      <IoMdCheckmarkCircleOutline className="text-green-500 mt-1 mr-2" />
+                      {p}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA SECTION */}
+      <section className="pb-20">
+        <div className="max-w-2xl mx-auto bg-white/90 rounded-3xl shadow-md p-10 text-center">
+          <h4 className="text-lg text-blue-600/70 font-semibold mb-3">Ready to Get Started?</h4>
+          <p className="text-gray-600 mb-8">
+            Let’s discuss which assessment would be most valuable for your organization.
+            Our experts will help you choose the right approach and create a customized assessment plan.
+          </p>
+
+          <Link
+            href="/contact"
+            className="bg-gradient-to-r from-violet-500 to-cyan-500 text-white px-6 py-3 rounded-full text-sm font-medium shadow opacity-90 hover:opacity-100 transition"
+          >
+            Contact Us
+          </Link>
+
+          <div className="flex justify-center gap-6 mt-6 text-sm text-gray-600">
+            <div className="flex items-center gap-2">
+              <IoMdCheckmarkCircleOutline className="text-green-500 w-4 h-4" />
+              Free consultation
+            </div>
+            <div className="flex items-center gap-2">
+              <IoMdCheckmarkCircleOutline className="text-green-500 w-4 h-4" />
+              Customized approach
+            </div>
+            <div className="flex items-center gap-2">
+              <IoMdCheckmarkCircleOutline className="text-green-500 w-4 h-4" />
+              Expert guidance
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <Footer />
+      <Footer />
     </>
   );
 }
