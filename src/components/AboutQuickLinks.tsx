@@ -46,8 +46,8 @@ export default function AboutUs() {
             className={`w-36 h-9 px-4 py-2 rounded-2xl text-sm font-medium transition 
               ${
                 active === key
-                  ? "bg-gradient-to-r from-violet-600 to-cyan-600 opacity-80 text-white"
-                  : "border border-violet-600 text-violet-600 hover:bg-violet-100 hover:-translate-y-2 hover:shadow-lg"
+                  ? "border border-violet-600 text-violet-600"
+                  : "bg-gradient-to-r from-violet-600 to-cyan-600 opacity-80 text-white hover:-translate-y-2 hover:shadow-lg"
               }`}
           >
             {sections[key as keyof typeof sections].title}
