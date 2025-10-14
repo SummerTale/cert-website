@@ -3,23 +3,24 @@ import React from "react";
 
 const services = [
   {
-    title: "Assessment",
-    description:
-      "Our Assessment service helps teams identify current capabilities and areas for improvement. Help your team understand strengths and deliver value. We analyze workflows, team dynamics, and processes to provide actionable insights.",
-    icon: <LuTarget className="text-violet-700 w-8 h-8" />,
-  },
-  {
-    title: "Training",
-    description:
-      "Training equips teams and organizations with the knowledge and skills to implement Scrum effectively. Our programs cover Scrum principles, roles, events, and artifacts, ensuring participants gain practical, actionable experience.",
-    icon: <LuBookOpen className="text-violet-700 w-8 h-8" />,
-  },
-  {
-    title: "Coaching",
-    description:
-      "Our Coaching supports teams and leaders in applying Scrum in real-world settings. We guide teams in achieving their Product Goals, improving collaboration, and fostering self-management. Coaching ensures sustainable adoption and continuous improvement.",
-    icon: <LuUserCheck className="text-violet-700 w-8 h-8" />,
-  },
+  title: "Assessment",
+  description:
+    "Our Assessment service identifies team capabilities and improvement areas. We analyze workflows, roles, and collaboration to uncover strengths, address challenges, and deliver actionable insights that enhance overall performance and value delivery.",
+  icon: <LuTarget className="text-violet-700 w-8 h-8" />,
+},
+{
+  title: "Training",
+  description:
+    "Our Training programs equip teams with the knowledge and skills to apply Scrum effectively. Covering principles, roles, events, and artifacts, each session blends theory with hands-on exercises to ensure confident, real-world implementation.",
+  icon: <LuBookOpen className="text-violet-700 w-8 h-8" />,
+},
+{
+  title: "Coaching",
+  description:
+    "Our Coaching supports teams and leaders as they apply Scrum in practice. We provide personalized guidance to strengthen collaboration, enable self-management, align goals, and continuous improvement across the organization.",
+  icon: <LuUserCheck className="text-violet-700 w-8 h-8" />,
+}
+,
 ];
 
 export default function Services() {
