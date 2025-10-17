@@ -34,7 +34,7 @@ export default function Header() {
         </Link>
 
           {/* Navigation */}
-        <nav className="hidden md:flex space-x-8 font-medium text-gray-700">
+        <nav className="hidden md:flex space-x-8 font-small text-gray-800">
           <Link href="/assessment"
           className={`transition-colors ${
               isActive("/assessment")
