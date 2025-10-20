@@ -8,7 +8,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 
-// <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-cyan-500"> ✓ Expert Trainers</span>
 export default function CoursePage({ params }: { params: { slug: string } }) {
   const course = coursesData.find((c) => c.slug === params.slug);
 
@@ -73,7 +72,7 @@ export default function CoursePage({ params }: { params: { slug: string } }) {
             <p className="text-gray-600 leading-relaxed mb-6">
               This comprehensive {course.title} course provides you with the essential
               knowledge and practical skills to lead Agile teams effectively. Through
-              interactive workshops and real-world scenarios, you'll gain hands-on
+              interactive workshops and real-world scenarios, you will gain hands-on
               experience implementing Scrum principles.
             </p>
 

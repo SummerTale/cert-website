@@ -3,7 +3,6 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 import Image from "next/image";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
-import { BsBarChart, BsPeople, BsPersonBadge, BsDiagram3, BsClipboardCheck, BsPersonGear } from "react-icons/bs";
 import { LuUser, LuUsers, LuBriefcase, LuCode, LuTarget, LuBuilding2 } from "react-icons/lu";
 
 export default function AssessmentPage() {
