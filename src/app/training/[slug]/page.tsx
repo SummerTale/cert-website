@@ -23,10 +23,10 @@ export default function CoursePage({ params }: { params: { slug: string } }) {
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between px-6 md:px-12 text-center md:text-left">
           
             {/* Hero Left (Image Placeholder or Logo) */}
-            <div className="relative w-full md:w-[300px] h-[150px] rounded-3xl bg-gradient-to-r from-violet-300 to-violet-200 flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 bg-white/40 backdrop-blur-lg rounded-3xl" />
+            <div className="relative w-full md:w-[300px] h-[150px] rounded-3xl flex items-center justify-center overflow-hidden">
+                <div className="absolute inset-0" />
                 <Image
-                    src="/logo.png"
+                    src="/images/csm.png"
                     alt="Agile Training & Coaching Logo"
                     width={150}
                     height={150}
@@ -146,8 +146,8 @@ export default function CoursePage({ params }: { params: { slug: string } }) {
                   <Image
                     src={instructor.avatar.replace("/public", "")}
                     alt={instructor.name}
-                    width={40}
-                    height={40}
+                    width={80}
+                    height={80}
                     className="rounded-full object-cover"
                   />
                   <div>

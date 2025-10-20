@@ -56,21 +56,13 @@ export const coursesData = [
     materials: "All materials included",
     instructors: [
       {
-        name: "Sarah Johnson",
+        name: "Raj Heda",
         title: "Senior Agile Coach",
-        experience: "15+ years",
-        certs: ["CST", "CSP", "SAFe SPC"],
-        avatar: "/public/instructors/sarah.png",
-        bio: "Certified Scrum Trainer with extensive experience in enterprise transformations."
+        experience: "27+ years",
+        certs: ["CSM", "CSP", "SAFe PC"],
+        avatar: "/public/instructors/raj.png",
+        bio: "Raj Heda has been teaching software development and Agile courses for over 27 years. He has extensive experience leading teams in Agile transformation, with successful results. Raj currently teaches in the Boston area at Boston University and Brandeis University."
       },
-      {
-        name: "Michael Chen",
-        title: "Agile Transformation Lead",
-        experience: "12+ years",
-        certs: ["CST", "ICP-ACC"],
-        avatar: "/public/instructors/michael.png",
-        bio: "Passionate about helping teams achieve peak performance through Agile practices."
-      }
     ],
     learnings: [
       "Understand the Scrum framework and its principles",
