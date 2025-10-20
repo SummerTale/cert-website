@@ -41,7 +41,7 @@ export default function Footer() {
           {/* Follow Us */}
           <div>
             <h3 className="text-lg font-medium mb-6">Follow us</h3>
-            <div className="flex space-x-8 text-white/70 w-10 h-10">
+            <div className="flex space-x-8 text-white/70 text-xl">
               <Link href="https://facebook.com" target="_blank" className="hover:text-white">
                   <FiFacebook />
                 </Link>

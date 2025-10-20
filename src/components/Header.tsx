@@ -132,7 +132,7 @@ export default function Header() {
                 View Courses
               </Link>
               {/* Social Media Icons */}
-              <div className=" flex gap-3 text-gray-700">
+              <div className="text-lg flex gap-3 text-gray-700">
                 |
                 <Link href="https://facebook.com" target="_blank">
                   <FiFacebook />
