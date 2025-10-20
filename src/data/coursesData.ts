@@ -73,11 +73,18 @@ export const coursesData = [
       }
     ],
     learnings: [
-      "Understand the Scrum framework",
+      "Understand the Scrum framework and its principles",
+      "Learn roles, events and artifacts in Scrum",
       "Facilitate Scrum ceremonies effectively",
+      "Remove impediments and enable team success",
+      "Scale Agile practices across organizations",
+      "Apply servant leadership principles",
       "Build high-performing Scrum teams",
       "Manage product backlogs efficiently",
-      "Handle common Scrum challenges"
+      "Implement continuos improvement practices",
+      "Handle common Scrum challenges",
+      "Create culture of collaboration",
+      "Measure team velocity and productivity",
     ],
     feedback: [
       {

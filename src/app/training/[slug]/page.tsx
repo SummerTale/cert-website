@@ -116,7 +116,7 @@ export default function CoursePage({ params }: { params: { slug: string } }) {
           </div>
 
           {/* What You’ll Learn */}
-          <div className="bg-white rounded-3xl shadow-lg p-8">
+          <div className="bg-white rounded-3xl shadow-lg p-6">
             <h2 className="text-md flex items-center gap-2 mb-4
             text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-cyan-500">
               <LuCircleCheck className="text-gray-800 text-2xl"/> What You’ll Learn
@@ -124,8 +124,8 @@ export default function CoursePage({ params }: { params: { slug: string } }) {
             <div className="grid md:grid-cols-2 gap-3 text-gray-600">
               {course.learnings.map((item, index) => (
                 <p key={index} className="flex items-start gap-1">
-                  <LuCircleCheck className="text-violet-600 text-xl"/>
-                  {item}
+                  <LuCircleCheck className="flex-shrink-0 text-violet-600 text-xl mt-1" />
+                  <span>{item}</span>
                 </p>
               ))}
             </div>
