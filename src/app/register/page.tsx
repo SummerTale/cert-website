@@ -192,7 +192,7 @@ function RegisterForm() {
                 value={formData.courses}
                 onChange={handleChange}
                 type="text"
-                placeholder="Enter courses you're interested in"
+                placeholder="Enter courses you are interested in"
                 className={`w-full border placeholder:text-gray-600 placeholder:text-sm bg-gray-50
                   ${
                   errors.courses ? "border-red-400" : "border-violet-300"
@@ -243,7 +243,7 @@ function RegisterForm() {
         <div className="flex flex-col items-center justify-center py-16 text-center animate-fadeIn">
           <h3 className="text-2xl font-semibold text-gray-800 mb-3">Thank You!</h3>
           <p className="text-gray-600">
-            Your registration was successful. We'll reach out to you soon with next steps!
+            Your registration was successful. We will reach out to you soon with next steps!
           </p>
         </div>
       )}
