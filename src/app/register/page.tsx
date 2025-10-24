@@ -5,8 +5,13 @@ import Image from "next/image";
 import { LuCreditCard } from "react-icons/lu";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { useSearchParams } from "next/navigation";
 
 export default function RegisterPage() {
+
+  const searchParams = useSearchParams();
+  const prefilledCourse = searchParams.get("course") || "";
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -14,7 +19,7 @@ export default function RegisterPage() {
     confirmPassword: "",
     address: "",
     contact: "",
-    courses: "",
+    courses: prefilledCourse,
   });
 
   const [errors, setErrors] = useState<Record<string, string>>({});

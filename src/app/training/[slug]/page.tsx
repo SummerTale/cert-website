@@ -26,7 +26,7 @@ export default function CoursePage({ params }: { params: { slug: string } }) {
             <div className="relative w-full md:w-[300px] h-[150px] rounded-3xl flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0" />
                 <Image
-                    src="/images/csm.png"
+                    src={course.avatar}
                     alt="Agile Training & Coaching Logo"
                     width={150}
                     height={150}
@@ -50,7 +50,10 @@ export default function CoursePage({ params }: { params: { slug: string } }) {
                 <LuClock className="text-cyan-500 text-xl" /> {course.duration}
               </span>
             </div>
-            <Link href="/register">
+            <Link href={{
+              pathname: "/register",
+              query: { course: course.title }
+            }}>
             <button className="mt-3 bg-gradient-to-r from-violet-500 to-cyan-500 text-white px-5 py-2 rounded-full text-sm font-medium hover:opacity-90 transition">
               Register Now
             </button>
@@ -259,7 +262,7 @@ export default function CoursePage({ params }: { params: { slug: string } }) {
                 {/* Avatar + Name */}
                 <div className="flex items-center gap-3 mb-1">
                 <Image
-                    src={review.avatar}
+                    src="/default.png"
                     alt={review.name}
                     width={25}
                     height={25}

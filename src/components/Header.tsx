@@ -63,19 +63,19 @@ export default function Header() {
             {trainingOpen && (
               <div className="absolute left-0 top-full mt-2 w-44 rounded-xl bg-white shadow-lg ring-1 ring-black/5 transition-all">
                 <Link
-                  href="/training/public"
+                  href="/training#public"
                   className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
                 >
                   Public
                 </Link>
                 <Link
-                  href="/training/corporate"
+                  href="/training#corporate"
                   className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
                 >
                   Corporate
                 </Link>
                 <Link
-                  href="/training/upcoming"
+                  href="/training#upcoming"
                   className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 rounded-b-xl"
                 >
                   Upcoming Courses
@@ -126,7 +126,7 @@ export default function Header() {
 
           {/* CTA */}
               <Link
-                href="/courses"
+                href="/training"
                 className="bg-gradient-to-r from-violet-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-medium opacity-90 hover:opacity-100 transition"
               >
                 View Courses
