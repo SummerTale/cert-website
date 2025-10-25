@@ -19,6 +19,7 @@ export interface Feedback {
 export interface Course {
   id: number;
   avatar: string;
+  role: string;
   slug: string;
   title: string;
   type: string;
@@ -86,6 +87,7 @@ const COMMON_FEEDBACK: Feedback[] = [
 function createCourse(courseData: {
   id: number;
   avatar: string;
+  role: string;
   slug: string;
   title: string;
   duration: string;
@@ -109,9 +111,10 @@ function createCourse(courseData: {
   return {
     id: courseData.id,
     avatar: courseData.avatar,
+    role: courseData.role,
     slug: courseData.slug,
     title: courseData.title,
-    type: courseData.type || "Certification Preparation",
+    type: courseData.type || "Public",
     duration: courseData.duration,
     date: courseData.date || "2020-04-09",
     level: courseData.level,
@@ -141,6 +144,7 @@ export const courses: Course[] = [
   createCourse({
     id: 1,
     avatar: "/course-logo/PSM.png",
+    role: "Scrum Master",
     slug: "professional-scrum-master-training",
     title: "Professional Scrum Master Training",
     duration: "2 days",
@@ -165,6 +169,7 @@ export const courses: Course[] = [
   createCourse({
     id: 2,
     avatar: "/course-logo/CSM.png",
+    role: "Scrum Master",
     slug: "csm-certified-scrum-master",
     title: "CSM – Certified ScrumMaster®",
     duration: "2 days",
@@ -189,6 +194,7 @@ export const courses: Course[] = [
   createCourse({
     id: 3,
     avatar: "/course-logo/CSPO.png",
+    role: "Product Owner",
     slug: "cspo-certified-scrum-product-owner",
     title: "CSPO – Certified Scrum Product Owner",
     duration: "2 days",
@@ -213,6 +219,7 @@ export const courses: Course[] = [
   createCourse({
     id: 4,
     avatar: "/course-logo/CSD.png",
+    role: "Developer",
     slug: "csd-certified-scrum-developer",
     title: "CSD – Certified Scrum Developer",
     duration: "5 days",
@@ -238,6 +245,8 @@ export const courses: Course[] = [
   createCourse({
     id: 5,
     avatar: "/course-logo/SAFe_SA.png",
+    role: "Management",
+    type: "Corporate Workshop",
     slug: "certified-safe-agilist",
     title: "Certified SAFe® Agilist",
     duration: "2 days",
@@ -263,6 +272,8 @@ export const courses: Course[] = [
   createCourse({
     id: 6,
     avatar: "/course-logo/SAFe_SSM.svg",
+    role: "Scrum Master",
+    type: "Corporate Workshop",
     slug: "certified-safe-scrum-master",
     title: "Certified SAFe® Scrum Master",
     duration: "2 days",
@@ -287,6 +298,8 @@ export const courses: Course[] = [
   createCourse({
     id: 7,
     avatar: "/course-logo/SAFe_POPM.svg",
+    role: "Product Owner",
+    type: "Corporate Workshop",
     slug: "certified-safe-product-owner-product-manager",
     title: "Certified SAFe® Product Owner / Product Manager",
     duration: "2 days",
@@ -312,6 +325,8 @@ export const courses: Course[] = [
   createCourse({
     id: 8,
     avatar: "/course-logo/SAFe_SP.png",
+    role: "Management",
+    type: "Corporate Workshop",
     slug: "certified-safe-government-practitioner",
     title: "Certified SAFe® Government Practitioner",
     duration: "2 days",
@@ -337,6 +352,8 @@ export const courses: Course[] = [
   createCourse({
     id: 9,
     avatar: "/course-logo/SAFe_SPC.png",
+    role: "Management",
+    type: "Corporate Workshop",
     slug: "certified-safe-program-consultant",
     title: "Certified SAFe® Program Consultant",
     duration: "4 days",
@@ -362,6 +379,8 @@ export const courses: Course[] = [
   createCourse({
     id: 10,
     avatar: "/course-logo/SAFe_ASM.png",
+    role: "Scrum Master",
+    type: "Corporate Workshop",
     slug: "certified-safe-advanced-scrum-master",
     title: "Certified SAFe® Advanced Scrum Master",
     duration: "2 days",
@@ -387,6 +406,8 @@ export const courses: Course[] = [
   createCourse({
     id: 11,
     avatar: "/course-logo/SAFe_SDP.png",
+    role: "Developer",
+    type: "Corporate Workshop",
     slug: "certified-safe-devops-practitioner",
     title: "SAFe® DevOps",
     duration: "2 days",
@@ -412,6 +433,8 @@ export const courses: Course[] = [
   createCourse({
     id: 12,
     avatar: "/course-logo/SAFe_ARCH.svg",
+    role: "Developer",
+    type: "Corporate Workshop",
     slug: "certified-safe-architect",
     title: "SAFe® for Architects",
     duration: "3 days",
@@ -437,6 +460,8 @@ export const courses: Course[] = [
   createCourse({
     id: 13,
     avatar: "/course-logo/SAFe_SP.png",
+    role: "Management",
+    type: "Corporate Workshop",
     slug: "certified-safe-practitioner",
     title: "Certified SAFe Practitioner",
     duration: "2 days",
@@ -461,6 +486,8 @@ export const courses: Course[] = [
   createCourse({
     id: 14,
     avatar: "/course-logo/SAFe_RTE.png",
+    role: "Devloper",
+    type: "Corporate Workshop",
     slug: "certified-safe-release-train-engineer",
     title: "Certified SAFe® Release Train Engineer",
     duration: "3 days",
@@ -486,6 +513,8 @@ export const courses: Course[] = [
   createCourse({
     id: 15,
     avatar: "/course-logo/SAFe_ASE.svg",
+    role: "Developer",
+    type: "Corporate Workshop",
     slug: "certified-safe-agile-software-engineer",
     title: "Certified SAFe® Agile Software Engineer",
     duration: "3 days",
@@ -511,6 +540,8 @@ export const courses: Course[] = [
   createCourse({
     id: 16,
     avatar: "/course-logo/SAFe_LPM.png",
+    role: "Management",
+    type: "Corporate Workshop",
     slug: "certified-safe-lean-portfolio-manager",
     title: "Certified SAFe® Lean Portfolio Manager",
     duration: "3 days",
@@ -536,6 +567,8 @@ export const courses: Course[] = [
   createCourse({
     id: 17,
     avatar: "/course-logo/SAFe_APM.svg",
+    role: "Product Owner",
+    type: "Corporate Workshop",
     slug: "certified-safe-agile-product-manager",
     title: "Certified SAFe® Agile Product Manager",
     duration: "3 days",
@@ -561,6 +594,7 @@ export const courses: Course[] = [
   createCourse({
     id: 18,
     avatar: "/course-logo/PSPO.png",
+    role: "Product Owner",
     slug: "professional-scrum-product-owner",
     title: "Professional Scrum Product Owner",
     duration: "2 days",
@@ -586,6 +620,7 @@ export const courses: Course[] = [
   createCourse({
     id: 19,
     avatar: "/course-logo/PSDI.png",
+    role: "Developer",
     slug: "professional-scrum-developer",
     title: "Professional Scrum Developer",
     duration: "3 days",
@@ -611,6 +646,8 @@ export const courses: Course[] = [
   createCourse({
     id: 20,
     avatar: "/course-logo/CALI.png",
+    role: "Management",
+    type: "Corporate Workshop",
     slug: "certified-agile-leadership-cal1",
     title: "Certified Agile Leadership",
     duration: "2 days",
@@ -636,6 +673,7 @@ export const courses: Course[] = [
   createCourse({
     id: 21,
     avatar: "/course-logo/PMP.png",
+    role: "Management",
     slug: "project-management-professional",
     title: "Project Management Professional",
     duration: "4 days",
@@ -661,6 +699,7 @@ export const courses: Course[] = [
   createCourse({
     id: 22,
     avatar: "/course-logo/PMI-ACP.png",
+    role: "Scrum Master",
     slug: "pmi-agile-certified-practitioner",
     title: "PMI Agile Certified Practitioner",
     duration: "2 days",
