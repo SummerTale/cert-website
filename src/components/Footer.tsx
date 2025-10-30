@@ -14,7 +14,7 @@ export default function Footer() {
         <div>
           <div className="mb-6">
             <Link href="/" className="text-2xl font-bold text-primary">
-              <Image src="/logo.png" alt="Agile Logo" width={120} height={48} className="h-12 w-auto" />
+              <Image src="/logo-light.png" alt="Agile Logo" width={150} height={100} className="w-auto" />
             </Link>
           </div>
           <div className="max-w-[80%] md:max-w-[80%]">

@@ -30,7 +30,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between h-23">
         {/* Logo */}
         <Link href="/" className="text-2xl font-bold text-primary">
-          <Image src="/logo.png" alt="Agile Logo" width={120} height={48} className="h-15 w-auto" />
+          <Image src="/logo-dark.png" alt="Agile Logo" width={120} height={48} className="h-15 w-auto" />
         </Link>
 
           {/* Navigation */}
@@ -63,19 +63,19 @@ export default function Header() {
             {trainingOpen && (
               <div className="absolute left-0 top-full mt-2 w-44 rounded-xl bg-white shadow-lg ring-1 ring-black/5 transition-all">
                 <Link
-                  href="/training#public"
+                  href="/training#leadership"
                   className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
                 >
                   Public
                 </Link>
                 <Link
-                  href="/training#corporate"
+                  href="/training#corporate-training"
                   className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
                 >
                   Corporate
                 </Link>
                 <Link
-                  href="/training#upcoming"
+                  href="/training/upcoming"
                   className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 rounded-b-xl"
                 >
                   Upcoming Courses
