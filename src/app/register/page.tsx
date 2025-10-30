@@ -6,6 +6,8 @@ import { LuCreditCard } from "react-icons/lu";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useSearchParams } from "next/navigation";
+import { coursesData } from "@/data/coursesData";
+
 
 // Create a separate component for the form that uses useSearchParams
 function RegisterForm() {
@@ -196,15 +198,15 @@ function RegisterForm() {
                   setFormData({ ...formData, courses: e.target.value })
                 }
                 className={`w-full border placeholder:text-gray-600 placeholder:text-sm bg-gray-50 ${
-                  errors.courses ? "border-red-400" : "border-[#C5BDF7]"
-                } rounded-full px-4 py-1.5 focus:ring-2 focus:ring-violet-400 outline-none appearance-none bg-[length:12px_12px] bg-[position:right_12px_center] bg-no-repeat pr-10`}
+                  errors.courses ? "border-red-400" : "border-violet-300"
+                } rounded-full px-4 py-2 focus:ring-2 focus:ring-violet-400 outline-none appearance-none bg-[length:12px_12px] bg-[position:right_12px_center] bg-no-repeat pr-10`}
                 style={{
                   backgroundImage:
                     "url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e\")",
                 }}
               >
                 <option value="">Select a course</option>
-                {require("@/data/coursesData").coursesData.map((course: any) => (
+                {coursesData.map((course) => (
                   <option key={course.id} value={course.title}>
                     {course.title}
                   </option>
