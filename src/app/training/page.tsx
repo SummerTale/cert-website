@@ -55,7 +55,7 @@ export default function TrainingPage() {
       <section className="relative h-[50vh] flex items-center justify-center text-center text-white">
         {/* Background Image */}
         <Image
-          src="/images/become-a-trainer-1.png"
+          src="/images/training-hero.png"
           alt="Training background"
           fill
           priority
