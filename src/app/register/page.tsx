@@ -65,7 +65,7 @@ function RegisterForm() {
           </h2>
 
 
-          <form onSubmit={handleSubmit} className="space-y-6 text-left">
+          <form onSubmit={handleSubmit} className="text-sm space-y-6 text-left">
             {/* Full Name */}
             <div>
               <label className="block text-sm font-medium text-gray-800 mb-2">
@@ -80,7 +80,7 @@ function RegisterForm() {
                 className={`w-full border placeholder:text-gray-600 placeholder:text-sm bg-gray-50
                   ${
                   errors.name ? "border-red-400" : "border-[#C5BDF7]"
-                } rounded-full px-4 py-1 focus:ring-2 focus:ring-violet-400 outline-none`}
+                } rounded-full px-4 py-1.5 focus:ring-2 focus:ring-violet-400 outline-none`}
               />
               {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
             </div>
@@ -99,7 +99,7 @@ function RegisterForm() {
                 className={`w-full border placeholder:text-gray-600 placeholder:text-sm bg-gray-50
                   ${
                   errors.email ? "border-red-400" : "border-[#C5BDF7]"
-                } rounded-full px-4 py-1 focus:ring-2 focus:ring-violet-400 outline-none`}
+                } rounded-full px-4 py-1.5 focus:ring-2 focus:ring-violet-400 outline-none`}
               />
               {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
             </div>
@@ -118,7 +118,7 @@ function RegisterForm() {
                 className={`w-full border placeholder:text-gray-600 placeholder:text-sm bg-gray-50
                   ${
                   errors.password ? "border-red-400" : "border-[#C5BDF7]"
-                } rounded-full px-4 py-1 focus:ring-2 focus:ring-violet-400 outline-none`}
+                } rounded-full px-4 py-1.5 focus:ring-2 focus:ring-violet-400 outline-none`}
               />
               {errors.password && (
                 <p className="text-red-500 text-sm mt-1">{errors.password}</p>
@@ -139,7 +139,7 @@ function RegisterForm() {
                 className={`w-full border placeholder:text-gray-600 placeholder:text-sm bg-gray-50
                   ${
                   errors.confirmPassword ? "border-red-400" : "border-[#C5BDF7]"
-                } rounded-full px-4 py-1 focus:ring-2 focus:ring-violet-400 outline-none`}
+                } rounded-full px-4 py-1.5 focus:ring-2 focus:ring-violet-400 outline-none`}
               />
               {errors.confirmPassword && (
                 <p className="text-red-500 text-sm mt-1">{errors.confirmPassword}</p>
@@ -160,7 +160,7 @@ function RegisterForm() {
                 className={`w-full border placeholder:text-gray-600 placeholder:text-sm bg-gray-50
                   ${
                   errors.address ? "border-red-400" : "border-[#C5BDF7]"
-                } rounded-2xl px-4 py-3 focus:ring-2 focus:ring-violet-400 outline-none resize-none`}
+                } rounded-2xl px-4 py-1.5 focus:ring-2 focus:ring-violet-400 outline-none resize-none`}
               />
               {errors.address && <p className="text-red-500 text-sm mt-1">{errors.address}</p>}
             </div>
@@ -179,27 +179,42 @@ function RegisterForm() {
                 className={`w-full border placeholder:text-gray-600 placeholder:text-sm bg-gray-50
                   ${
                   errors.contact ? "border-red-400" : "border-[#C5BDF7]"
-                } rounded-full px-4 py-1 focus:ring-2 focus:ring-violet-400 outline-none`}
+                } rounded-full px-4 py-1.5 focus:ring-2 focus:ring-violet-400 outline-none`}
               />
               {errors.contact && <p className="text-red-500 text-sm mt-1">{errors.contact}</p>}
             </div>
 
             {/* Courses */}
             <div>
-              <label className="block text-sm font-medium text-gray-800 mb-2">Courses</label>
-              <input
+              <label className="block text-sm font-medium text-gray-800 mb-2">
+                Courses
+              </label>
+              <select
                 name="courses"
                 value={formData.courses}
-                onChange={handleChange}
-                type="text"
-                placeholder="Enter courses you are interested in"
-                className={`w-full border placeholder:text-gray-600 placeholder:text-sm bg-gray-50
-                  ${
-                  errors.courses ? "border-red-400" : "border-violet-300"
-                } rounded-full px-4 py-1 focus:ring-2 focus:ring-violet-400 outline-none`}
-              />
-              {errors.courses && <p className="text-red-500 text-sm mt-1">{errors.courses}</p>}
+                onChange={(e) =>
+                  setFormData({ ...formData, courses: e.target.value })
+                }
+                className={`w-full border placeholder:text-gray-600 placeholder:text-sm bg-gray-50 ${
+                  errors.courses ? "border-red-400" : "border-[#C5BDF7]"
+                } rounded-full px-4 py-1.5 focus:ring-2 focus:ring-violet-400 outline-none appearance-none bg-[length:12px_12px] bg-[position:right_12px_center] bg-no-repeat pr-10`}
+                style={{
+                  backgroundImage:
+                    "url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e\")",
+                }}
+              >
+                <option value="">Select a course</option>
+                {require("@/data/coursesData").coursesData.map((course: any) => (
+                  <option key={course.id} value={course.title}>
+                    {course.title}
+                  </option>
+                ))}
+              </select>
+              {errors.courses && (
+                <p className="text-red-500 text-sm mt-1">{errors.courses}</p>
+              )}
             </div>
+
 
             {/* Payment Info */}
             <div>
