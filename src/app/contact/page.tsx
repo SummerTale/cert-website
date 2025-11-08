@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { useState } from "react";
@@ -49,7 +48,7 @@ export default function ContactPage() {
         <section className="relative bg-gradient-to-r from-violet-600/80 via-violet-700/70 to-cyan-600/70 text-center text-white py-20">
           <h1 className="text-2xl md:text-3xl font-semibold mb-3">Get in Touch</h1>
           <p className="text-sm md:text-base max-w-2xl mx-auto text-gray-100">
-            Have questions about our training programs or coaching services? We're here to help you on your agile transformation journey.
+            Have questions about our training programs or coaching services? We are here to help you on your agile transformation journey.
           </p>
         </section>
 
@@ -135,7 +134,7 @@ export default function ContactPage() {
             ) : (
               <div className="text-center py-20 animate-fadeIn">
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">Thank you!</h3>
-                <p className="text-gray-600">Your message has been sent. We'll get back to you soon.</p>
+                <p className="text-gray-600">Your message has been sent. We will get back to you soon.</p>
               </div>
             )}
           </div>
