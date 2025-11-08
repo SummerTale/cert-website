@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { LuArrowRight, LuBookOpen, LuTrophy, LuUsers, LuStar, LuAward, LuHeart, LuTarget, LuLightbulb, LuTrendingUp, LuCircleCheck, LuGlobe, LuShield, LuSparkles } from "react-icons/lu";
+import { LuArrowRight, LuBookOpen, LuTrophy, LuUsers, LuStar, LuHeart, LuTarget, LuLightbulb, LuTrendingUp, LuCircleCheck, LuGlobe, LuShield, LuSparkles } from "react-icons/lu";
 import { HiOutlineBolt } from "react-icons/hi2";
 import Link from "next/link";
 
@@ -96,8 +96,8 @@ export default function AboutPage() {
                 and long-term team success.
               </p>
               <p className="text-gray-700 text-md mb-3 leading-relaxed">
-                "My goal is not just to certify students, but to create agile champions who can drive meaningful 
-                change in their organizations," Raj often says. This philosophy has earned him recognition as one 
+                &quot;My goal is not just to certify students, but to create agile champions who can drive meaningful 
+                change in their organizations&quot;, Raj often says. This philosophy has earned him recognition as one 
                 of the most effective agile trainers in the industry.
               </p>
             </div>
@@ -202,7 +202,7 @@ export default function AboutPage() {
         <section>
           <h2 className="text-center text-xl text-blue-500/80 font-medium mb-5">Trusted & Certified</h2>
           <p className="text-center text-gray-700 mb-10 text-md px-85">
-            As an authorized training partner with the world's leading agile certification bodies, we ensure our programs meet the highest industry standards and provide globally recognized credentials.
+            As an authorized training partner with the world&apos;s leading agile certification bodies, we ensure our programs meet the highest industry standards and provide globally recognized credentials.
           </p>
           <div className="flex flex-wrap justify-center gap-8 max-w-5xl mx-auto">
             <PartnerCard img="/partners/scrum-alliance-logo.png" name="Scrum Alliance" desc="Authorized to deliver CSM, CSPO, and advanced Scrum certifications." />
@@ -237,7 +237,7 @@ export default function AboutPage() {
 
           {/* Description */}
           <p className="max-w-2xl mx-auto text-white/90 text-base md:text-lg leading-relaxed">
-            Whether you're an individual looking to advance your career or an organization
+            Whether you are an individual looking to advance your career or an organization
             ready for transformation, we are here to guide you every step of the way.
           </p>
 
