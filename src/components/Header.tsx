@@ -26,7 +26,7 @@ export default function Header() {
   };
 
   return (
-    <header className="shadow-sm fixed w-full top-0 z-50 bg-white/40 backdrop-blur-xs">
+    <header className="fixed w-full top-0 z-50 bg-white/40 backdrop-blur-xs">
       <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between h-23">
         {/* Logo */}
         <Link href="/" className="text-2xl font-bold text-primary">
