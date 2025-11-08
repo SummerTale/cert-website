@@ -1,5 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
-{/* eslint-disable-next-line react/no-unescaped-entities */}
 
 import Image from "next/image";
 import Header from "@/components/Header";
