@@ -1,12 +1,16 @@
 "use client";
 
 import { useState } from "react";
-import { LuMail, LuPhone, LuMapPin, LuClock, LuSend } from "react-icons/lu";
-import { FiFacebook, FiTwitter, FiLinkedin, FiYoutube } from "react-icons/fi";
+import { LuMail, LuPhone, LuMapPin, LuClock4, LuSend } from "react-icons/lu";
+import { LuFacebook, LuTwitter, LuLinkedin, LuYoutube } from "react-icons/lu";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Toast from "@/components/Toast";
+import Image from "next/image";
 
 export default function ContactPage() {
+  const [toastVisible, setToastVisible] = useState(false);
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -37,117 +41,252 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (validate()) setSubmitted(true);
+    if (validate()) {
+      // Show confirmation toast
+      setToastVisible(true);
+      // Reset the form
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        subject: "",
+        message: ""
+      });
+      // Reset errors
+      setErrors({});
+    }
   };
 
   return (
     <>
       <Header />
       <main className="bg-gradient-to-br from-violet-50 to-cyan-50 min-h-screen pb-12">
-        {/* HERO SECTION */}
-        <section className="relative bg-gradient-to-r from-violet-600/80 via-violet-700/70 to-cyan-600/70 text-center text-white py-20">
-          <h1 className="text-2xl md:text-3xl font-semibold mb-3">Get in Touch</h1>
-          <p className="text-sm md:text-base max-w-2xl mx-auto text-gray-100">
-            Have questions about our training programs or coaching services? We are here to help you on your agile transformation journey.
+        <section className="relative h-[300px] flex flex-col items-center justify-center text-center text-white overflow-hidden">
+        {/* Background Image */}
+        <Image
+          src="/images/contact-us.png"
+          alt="Contact Agile Training & Coaching"
+          fill
+          priority
+          className="object-cover"
+        />
+
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-violet-900/90 via-blue-900/90 to-cyan-900/90"></div>
+
+        {/* Text Content */}
+        <div className="relative z-10 px-6">
+          <h2 className="text-md font-medium mb-3 text-white/90 tracking-wide">
+            Get in Touch
+          </h2>
+          <p className="text-lg max-w-2xl mx-auto leading-relaxed text-white">
+            Have questions about our training programs or coaching services? 
+            We&apos;re here to help you on your agile transformation journey.
           </p>
-        </section>
+        </div>
+      </section>
 
         {/* CONTACT SECTION */}
-        <section className="max-w-6xl mx-auto px-6 md:px-10 py-16 grid md:grid-cols-[1fr_2fr] gap-12 items-start">
-          {/* LEFT SIDE */}
+        <section className="max-w-7xl mx-auto px-6 py-15">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start md:items-stretch">
+          {/* LEFT SECTION - CONTACT INFO */}
           <div className="space-y-8">
-            <h2 className="text-violet-600 font-semibold mb-4">Contact Information</h2>
-            <p className="text-gray-600 text-sm mb-6">
-              Reach out to us through any of these channels. We typically respond within 24 hours.
+
+            <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 via-blue-500 to-cyan-500 text-lg font-medium">Contact Information</h3>
+            <p className="text-gray-600 max-w-sm">
+              Reach out to us through any of these channels. <br />
+              We typically respond within 24 hours.
             </p>
 
-            {/* Info Cards */}
-            <div className="space-y-4">
-              <InfoCard icon={<LuMail />} title="Email" value="info@agiletraining.com" />
-              <InfoCard icon={<LuPhone />} title="Phone" value="+1 (555) 123-4567" />
-              <InfoCard icon={<LuMapPin />} title="Address" value="685 Commonwealth Avenue, Boston, MA 02215" />
-              <InfoCard icon={<LuClock />} title="Business Hours" value="Monday – Friday: 9:00 AM – 6:00 PM PST" />
-            </div>
-
-            {/* Social Links */}
-            <div>
-              <h3 className="font-medium text-gray-700 mb-3">Follow Us</h3>
-              <div className="flex gap-4 text-violet-500">
-                <FiFacebook className="cursor-pointer hover:text-cyan-500 transition" />
-                <FiTwitter className="cursor-pointer hover:text-cyan-500 transition" />
-                <FiLinkedin className="cursor-pointer hover:text-cyan-500 transition" />
-                <FiYoutube className="cursor-pointer hover:text-cyan-500 transition" />
+            {/* EMAIL */}
+            <div className="p-5 bg-white rounded-2xl hover:shadow-sm flex items-start gap-4">
+              <div className="w-12 h-12 rounded-full bg-gradient-to-r from-violet-500 to-cyan-500 flex items-center justify-center text-white">
+                <LuMail className="w-6 h-6" />
+              </div>
+              <div>
+                <h4 className="text-gray-800 font-semibold">Email</h4>
+                <p className="text-gray-600 text-sm">info@agiletraining.com</p>
               </div>
             </div>
+
+            {/* PHONE */}
+            <div className="p-5 bg-white rounded-2xl hover:shadow-sm flex items-start gap-4">
+              <div className="w-12 h-12 rounded-full bg-gradient-to-r from-violet-500 to-cyan-500 flex items-center justify-center text-white">
+                <LuPhone className="w-6 h-6" />
+              </div>
+              <div>
+                <h4 className="text-gray-800 font-semibold">Phone</h4>
+                <p className="text-gray-600 text-sm">+1 (555) 123-4567</p>
+              </div>
+            </div>
+
+            {/* ADDRESS */}
+            <div className="p-5 bg-white rounded-2xl hover:shadow-sm flex items-start gap-4">
+              <div className="w-12 h-12 rounded-full bg-gradient-to-r from-violet-500 to-cyan-500 flex items-center justify-center text-white">
+                <LuMapPin className="w-6 h-6" />
+              </div>
+              <div>
+                <h4 className="text-gray-800 font-semibold">Address</h4>
+                <p className="text-gray-600 text-sm">
+                  685 Commonwealth Avenue,<br />
+                  Boston, MA 02215
+                </p>
+              </div>
+            </div>
+
+            {/* HOURS */}
+            <div className="p-5 bg-white rounded-2xl hover:shadow-sm flex items-start gap-4">
+              <div className="w-12 h-12 rounded-full bg-gradient-to-r from-violet-500 to-cyan-500 flex items-center justify-center text-white">
+                <LuClock4 className="w-6 h-6" />
+              </div>
+              <div>
+                <h4 className="text-gray-800 font-semibold">Business Hours</h4>
+                <p className="text-gray-600 text-sm">
+                  Monday - Friday: 9:00 AM - 6:00 PM PST
+                </p>
+              </div>
+            </div>
+
+            {/* SOCIAL ICONS */}
+            <div className="p-6 bg-white rounded-2xl">
+              <h4 className="text-gray-800 mb-4">Follow Us</h4>
+
+              <div className="flex items-center gap-4 text-lg">
+                <a className="w-12 h-12 rounded-full bg-gradient-to-r from-violet-500 to-cyan-500 text-white flex items-center justify-center">
+                  <LuFacebook className="w-6 h-6"/>
+                </a>
+                <a className="w-12 h-12 rounded-full bg-gradient-to-r from-violet-500 to-cyan-500 text-white flex items-center justify-center">
+                  <LuTwitter className="w-6 h-6"/>
+                </a>
+                <a className="w-12 h-12 rounded-full bg-gradient-to-r from-violet-500 to-cyan-500 text-white flex items-center justify-center">
+                  <LuLinkedin className="w-6 h-6"/>
+                </a>
+                <a className="w-12 h-12 rounded-full bg-gradient-to-r from-violet-500 to-cyan-500 text-white flex items-center justify-center">
+                  <LuYoutube className="w-6 h-6"/>
+                </a>
+              </div>
+            </div>
+
           </div>
 
           {/* RIGHT SIDE - FORM */}
-          <div className="bg-white rounded-3xl p-8">
-            {!submitted ? (
-              <>
-                <h2 className="text-violet-600 font-semibold mb-6">Send us a Message</h2>
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <InputField name="firstName" label="First Name *" value={formData.firstName} onChange={handleChange} error={errors.firstName} />
-                    <InputField name="lastName" label="Last Name *" value={formData.lastName} onChange={handleChange} error={errors.lastName} />
-                  </div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <InputField name="email" label="Email Address *" value={formData.email} onChange={handleChange} error={errors.email} />
-                    <InputField name="phone" label="Phone Number" value={formData.phone} onChange={handleChange} />
-                  </div>
-                  <div>
-                    <label className="text-sm text-gray-700">Subject</label>
-                    <select
-                      name="subject"
-                      value={formData.subject}
-                      onChange={handleChange}
-                      className="w-full border border-gray-300 rounded-full px-4 py-2 mt-1 focus:ring-2 focus:ring-violet-400 outline-none text-sm"
-                    >
-                      <option value="">Select a subject</option>
-                      <option value="Training Inquiry">Training Inquiry</option>
-                      <option value="Coaching Services">Coaching Services</option>
-                      <option value="Partnership">Partnership</option>
-                      <option value="General">General</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label className="text-sm text-gray-700">Message *</label>
-                    <textarea
-                      name="message"
-                      rows={4}
-                      value={formData.message}
-                      onChange={handleChange}
-                      placeholder="Tell us how we can help you..."
-                      className="w-full border border-gray-300 rounded-2xl px-4 py-2 mt-1 focus:ring-2 focus:ring-violet-400 outline-none text-sm"
-                    />
-                    {errors.message && <p className="text-red-500 text-xs mt-1">{errors.message}</p>}
-                  </div>
+          <div className="md:col-span-2">
+            <div className="bg-white rounded-3xl p-10">
+              {!submitted ? (
+                <>
+                  <h2 className="text-violet-600 mb-6">Send us a Message</h2>
+                  <form onSubmit={handleSubmit} className="space-y-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <InputField name="firstName" label="First Name *" value={formData.firstName} onChange={handleChange} error={errors.firstName} />
+                      <InputField name="lastName" label="Last Name *" value={formData.lastName} onChange={handleChange} error={errors.lastName} />
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <InputField name="email" label="Email Address *" value={formData.email} onChange={handleChange} error={errors.email} />
+                      <InputField name="phone" label="Phone Number" value={formData.phone} onChange={handleChange} />
+                    </div>
+                    <div>
+                      <label className="text-sm text-gray-700">Subject</label>
+                      <select
+                        name="subject"
+                        value={formData.subject}
+                        onChange={handleChange}
+                        className="w-full bg-gray-50 rounded-full px-4 py-2 mt-1 focus:ring-2 focus:ring-violet-400 outline-none text-sm"
+                      >
+                        <option value="">Select a subject</option>
+                        <option value="Training Inquiry">Training Inquiry</option>
+                        <option value="Coaching Services">Coaching Services</option>
+                        <option value="Partnership">Partnership</option>
+                        <option value="General">General</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label className="text-sm text-gray-700">Message *</label>
+                      <textarea
+                        name="message"
+                        rows={4}
+                        value={formData.message}
+                        onChange={handleChange}
+                        placeholder="Tell us how we can help you..."
+                        className="w-full bg-gray-50 rounded-2xl px-4 py-2 mt-1 focus:ring-2 focus:ring-violet-400 outline-none text-sm"
+                      />
+                      {errors.message && <p className="text-red-500 text-xs mt-1">{errors.message}</p>}
+                    </div>
 
-                  <button
-                    type="submit"
-                    className="bg-gradient-to-r from-violet-600 to-cyan-500 text-white px-6 py-2 rounded-full text-sm font-medium flex items-center justify-center gap-2 hover:opacity-90 transition"
-                  >
-                    Send Message <LuSend size={16} />
-                  </button>
-                </form>
-              </>
-            ) : (
-              <div className="text-center py-20 animate-fadeIn">
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">Thank you!</h3>
-                <p className="text-gray-600">Your message has been sent. We will get back to you soon.</p>
-              </div>
-            )}
+                    <button
+                      type="submit"
+                      className="bg-gradient-to-r from-violet-600 to-cyan-500 text-white opacity-90 px-6 py-2 rounded-full text-sm font-medium flex items-center justify-center gap-2 hover:opacity-100 transition"
+                    >
+                      Send Message <LuSend size={16} />
+                    </button>
+                  </form>
+                </>
+              ) : (
+                <div className="text-center py-20 animate-fadeIn">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Thank you!</h3>
+                  <p className="text-gray-600">Your message has been sent. We will get back to you soon.</p>
+                </div>
+              )}
+            </div>
+          </div>
           </div>
         </section>
 
         {/* WHY CHOOSE US */}
-        <section className="max-w-5xl mx-auto mt-10 px-6">
-          <div className="bg-white rounded-3xl p-8 flex flex-col md:flex-row justify-around items-center text-center">
-            <WhyItem icon={<LuMail className="text-violet-500" />} title="Quick Response" desc="We respond to all inquiries within 24 hours" />
-            <WhyItem icon={<LuPhone className="text-cyan-500" />} title="Expert Guidance" desc="Speak directly with our certified trainers" />
-            <WhyItem icon={<LuClock className="text-orange-500" />} title="Flexible Support" desc="Multiple contact options to suit your needs" />
+        <section className="max-w-5xl mx-auto px-6 py-4">
+          <div className="bg-white rounded-3xl shadow-sm py-5 px-8 text-center">
+
+            {/* Heading */}
+            <h2 className="text-blue-500 text-md mb-8">Why Choose Us?</h2>
+
+            {/* Three Columns */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+
+              {/* Quick Response */}
+              <div className="flex flex-col items-center text-center">
+                <div className="w-15 h-15 rounded-full flex items-center justify-center bg-gradient-to-br from-violet-500 to-purple-400 mb-6 shadow-md">
+                  <LuMail className="text-white w-7 h-7" />
+                </div>
+                <h4 className="text-gray-800 text-md mb-2">Quick Response</h4>
+                <p className="text-gray-600 text-sm max-w-[275px]">
+                  We respond to all inquiries within 24 hours
+                </p>
+              </div>
+
+              {/* Expert Guidance */}
+              <div className="flex flex-col items-center text-center">
+                <div className="w-15 h-15 rounded-full flex items-center justify-center bg-gradient-to-br from-cyan-500 to-blue-500 mb-6 shadow-md">
+                  <LuPhone className="text-white w-7 h-7" />
+                </div>
+                <h4 className="text-gray-800 text-md mb-2">Expert Guidance</h4>
+                <p className="text-gray-600 text-sm max-w-[275px]">
+                  Speak directly with our certified trainers
+                </p>
+              </div>
+
+              {/* Flexible Support */}
+              <div className="flex flex-col items-center text-center">
+                <div className="w-15 h-15 rounded-full flex items-center justify-center bg-gradient-to-br from-orange-400 to-red-500 mb-6 shadow-md">
+                  <LuClock4 className="text-white w-7 h-7" />
+                </div>
+                <h4 className="text-gray-800 text-md mb-2">Flexible Support</h4>
+                <p className="text-gray-600 text-sm max-w-[275px]">
+                  Multiple contact options to suit your needs
+                </p>
+              </div>
+
+            </div>
+
           </div>
         </section>
+
+
+        <Toast
+          message="Thank you for reaching out! We will get back to you soon."
+          visible={toastVisible}
+          onClose={() => setToastVisible(false)}
+        />
+
       </main>
       <Footer />
     </>
@@ -155,19 +294,6 @@ export default function ContactPage() {
 }
 
 /* ---- Subcomponents ---- */
-
-function InfoCard({ icon, title, value }: { icon: React.ReactNode; title: string; value: string }) {
-  return (
-    <div className="flex items-center gap-4 bg-white p-4 rounded-2xl border border-gray-100">
-      <div className="text-violet-600 bg-violet-50 p-3 rounded-full">{icon}</div>
-      <div>
-        <p className="font-medium text-gray-800 text-sm">{title}</p>
-        <p className="text-gray-600 text-sm">{value}</p>
-      </div>
-    </div>
-  );
-}
-
 function InputField({
   name,
   label,
@@ -189,21 +315,11 @@ function InputField({
         value={value}
         onChange={onChange}
         type="text"
-        className={`w-full border rounded-full px-4 py-2 mt-1 text-sm placeholder:text-gray-400 outline-none ${
-          error ? "border-red-400" : "border-gray-300 focus:ring-2 focus:ring-violet-400"
+        className={`w-full bg-gray-50 rounded-full px-4 py-2 mt-1 text-sm placeholder:text-gray-400 outline-none ${
+          error ? "border border-red-400" : "focus:ring-2 focus:ring-violet-400"
         }`}
       />
       {error && <p className="text-red-500 text-xs mt-1">{error}</p>}
-    </div>
-  );
-}
-
-function WhyItem({ icon, title, desc }: { icon: React.ReactNode; title: string; desc: string }) {
-  return (
-    <div className="flex flex-col items-center gap-3 max-w-[200px]">
-      <div className="bg-gradient-to-r from-violet-100 to-cyan-100 p-3 rounded-full">{icon}</div>
-      <h4 className="text-gray-800 font-medium text-sm">{title}</h4>
-      <p className="text-gray-600 text-xs">{desc}</p>
     </div>
   );
 }
