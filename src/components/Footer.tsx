@@ -34,7 +34,7 @@ export default function Footer() {
               <li><Link href="/about" className="hover:text-white">About us</Link></li>
               <li><Link href="/contact" className="hover:text-white">Contact us</Link></li>
               <li><Link href="/become-a-trainer" className="hover:text-white">Become a trainer</Link></li>
-              <li><Link href="/terms" className="hover:text-white">Terms and Conditions</Link></li>
+              <li><Link href="/terms-and-conditions" className="hover:text-white">Terms and Conditions</Link></li>
             </ul>
           </div>
 
