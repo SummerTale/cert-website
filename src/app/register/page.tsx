@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useSearchParams } from "next/navigation";
 import { coursesData } from "@/data/coursesData";
+import emailjs from "@emailjs/browser";
 
 
 // Create a separate component for the form that uses useSearchParams
@@ -51,8 +52,39 @@ function RegisterForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (validate()) setSubmitted(true);
-  };
+
+  if (!validate()) return;
+
+  emailjs.send(
+    "service_n53rxxr",
+    "template_gea9r7l",
+    {
+      name: formData.name,
+      email: formData.email,
+      contact: formData.contact,
+      address: formData.address,
+      courses: formData.courses,
+    },
+    "XNyxe3sZ2zIMuXrNO"
+  )
+  .then(() => {
+    setSubmitted(true);
+    setFormData({
+      name: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+      address: "",
+      contact: "",
+      courses: prefilledCourse,
+    });
+    setErrors({});
+  })
+  .catch((err) => {
+    console.error(err);
+    alert("Something went wrong while sending your message.");
+  });
+};
 
   return (
     <section className="max-w-3xl mx-auto bg-white rounded-3xl shadow-xl p-6 md:p-5 mt-12 text-center transition-all duration-500">

@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Toast from "@/components/Toast";
 import Image from "next/image";
+import emailjs from "@emailjs/browser";
 
 export default function ContactPage() {
   const [toastVisible, setToastVisible] = useState(false);
@@ -41,22 +42,46 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (validate()) {
-      // Show confirmation toast
-      setToastVisible(true);
-      // Reset the form
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        subject: "",
-        message: ""
-      });
-      // Reset errors
-      setErrors({});
-    }
-  };
+      if (validate()) {
+
+    emailjs
+      .send(
+        "service_n53rxxr",
+        "template_9nqpp9l",  
+        {
+          name: formData.firstName,
+          email: formData.email,
+          phone: formData.phone,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        "XNyxe3sZ2zIMuXrNO"
+      )
+      .then(
+        () => {
+          // Show your toast
+          setToastVisible(true);
+
+          // Reset form
+          setFormData({
+            firstName: "",
+            lastName: "",
+            email: "",
+            phone: "",
+            subject: "",
+            message: "",
+          });
+
+          // Reset errors
+          setErrors({});
+        },
+        (error) => {
+          console.error("EmailJS Error:", error);
+          alert("Something went wrong sending your message.");
+        }
+      );
+  }
+};
 
   return (
     <>

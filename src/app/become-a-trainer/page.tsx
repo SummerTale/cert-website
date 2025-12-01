@@ -8,6 +8,7 @@ import Link from "next/link";
 import { useState } from "react";
 import Toast from "@/components/Toast";
 import React from "react";
+import emailjs from "@emailjs/browser";
 
 import {
   LuDollarSign,
@@ -74,23 +75,45 @@ export default function BecomeTrainerPage() {
 
     if (!validate()) return;
 
-    setSubmitted(true);
+  emailjs
+    .send(
+      "service_n53rxxr",
+      "template_9nqpp9l",
+      {
+        name: form.firstName,
+        email: form.email,
+        phone: form.phone,
+        reason: form.reason,
+      },
+      "XNyxe3sZ2zIMuXrNO" 
+    )
+    .then(
+      () => {
+        setSubmitted(true);
 
-    setForm({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        linkedin: "",
-        expertise: "",
-        experience: "",
-        certifications: "",
-        availability: "",
-        reason: "",
-    });
+        // Reset form
+        setForm({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          linkedin: "",
+          expertise: "",
+          experience: "",
+          certifications: "",
+          availability: "",
+          reason: "",
+        });
 
-    setErrors({});
-    };
+        // Reset errors
+        setErrors({});
+      },
+      (error) => {
+        console.error("EmailJS Error:", error);
+        alert("Something went wrong sending your application.");
+      }
+    );
+};
 
   return (
     <>
