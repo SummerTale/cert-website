@@ -85,6 +85,7 @@ export default function ResourcesPage() {
               title="Scrum Artifacts Template Pack"
               description="Complete set of templates for Product Backlog, Sprint Backlog, and Increment documentation."
               format="PDF & Excel"
+              href=" https://www.scrum.org/resources/professional-scrum-developer-glossary"
             />
             <TemplateCard
               icon={<LuFileText className="w-6 h-6" />}
@@ -92,6 +93,7 @@ export default function ResourcesPage() {
               title="Sprint Planning Checklist"
               description="Comprehensive checklist to ensure your sprint planning sessions are productive and complete."
               format="PDF"
+              href="https://www.scrumalliance.org/about-scrum"
             />
             <TemplateCard
               icon={<LuFileText className="w-6 h-6" />}
@@ -99,6 +101,7 @@ export default function ResourcesPage() {
               title="Definition of Done Template"
               description="Customizable template to establish clear completion criteria for your team."
               format="Word & PDF"
+              href="https://www.scrum.org/resources/blog/walking-through-definition-done"
             />
 
             {/* Row 2 */}
@@ -108,6 +111,7 @@ export default function ResourcesPage() {
               title="Retrospective Activities Guide"
               description="15+ proven retrospective formats and facilitation techniques for engaging team discussions."
               format="PDF"
+              href="https://www.funretrospectives.com/"
             />
             <TemplateCard
               icon={<LuFileText className="w-6 h-6" />}
@@ -115,6 +119,7 @@ export default function ResourcesPage() {
               title="User Story Mapping Toolkit"
               description="Tools and templates for effective user story mapping sessions with your product team."
               format="PDF & Miro"
+              href="https://www.atlassian.com/agile/project-management/user-stories"
             />
             <TemplateCard
               icon={<LuFileText className="w-6 h-6" />}
@@ -122,6 +127,7 @@ export default function ResourcesPage() {
               title="Agile Metrics Dashboard"
               description="Track velocity, burndown, and key performance indicators with this ready-to-use dashboard."
               format="Excel"
+              href="https://www.scrum.org/resources/blog/agile-metrics-good-bad-and-ugly"
             />
           </div>
         </section>
@@ -140,6 +146,7 @@ export default function ResourcesPage() {
               gradient="bg-gradient-to-r from-violet-500 to-purple-500"
               description="In-depth exploration of Sprint Planning, Daily Scrum, Sprint Review, and Sprint Retrospective."
               action="Read Guide"
+              href="https://www.scrum.org/learning-series/what-is-scrum/"
             />
             <GuideCard
               icon={<LuTrendingUp className="w-7 h-7" />}
@@ -147,6 +154,7 @@ export default function ResourcesPage() {
               gradient="bg-gradient-to-r from-cyan-500 to-blue-500"
               description="Best practices for implementing the Scaled Agile Framework in enterprise organizations."
               action="Read Guide"
+              href="https://framework.scaledagile.com/advanced-topics/"
             />
             <GuideCard
               icon={<LuTarget className="w-7 h-7" />}
@@ -154,6 +162,7 @@ export default function ResourcesPage() {
               gradient="bg-gradient-to-r from-orange-500 to-red-500"
               description="Essential skills and strategies for effective product ownership and value maximization."
               action="Read Guide"
+              href="https://www.scrum.org/pathway/product-owner-learning-path/"
             />
             <GuideCard
               icon={<LuUsers className="w-7 h-7" />}
@@ -161,6 +170,7 @@ export default function ResourcesPage() {
               gradient="bg-gradient-to-r from-purple-500 to-pink-500"
               description="Proven techniques for fostering collaboration, trust, and continuous improvement."
               action="Read Guide"
+              href="https://www.scrumalliance.org/about-scrum"
             />
           </div>
         </section>
@@ -179,6 +189,7 @@ export default function ResourcesPage() {
             duration="15:30"
             title="Introduction to Scrum in 15 Minutes"
             description="Quick overview of Scrum framework, roles, events, and artifacts for beginners."
+            href="https://www.youtube.com/watch?v=hLkDdAl8OYg"
             />
 
             <VideoCard
@@ -186,6 +197,7 @@ export default function ResourcesPage() {
             duration="28:45"
             title="Mastering Sprint Retrospectives"
             description="Advanced facilitation techniques to make your retrospectives more effective and engaging."
+            href="https://www.youtube.com/results?search_query=scrum+retrospective+techniques"
             />
 
             <VideoCard
@@ -193,6 +205,7 @@ export default function ResourcesPage() {
             duration="42:15"
             title="SAFe PI Planning Workshop"
             description="Step-by-step walkthrough of planning and executing a successful Program Increment planning event."
+            href="https://www.youtube.com/results?search_query=safe+pi+planning"
             />
 
         </div>
@@ -211,18 +224,21 @@ export default function ResourcesPage() {
               industry="Finance"
               challenge="Legacy waterfall processes causing delayed releases and low customer satisfaction."
               result="60% faster time-to-market, 40% improvement in team productivity."
+              href="https://www.scrum.org/resources/blog"
             />
             <CaseStudyCard
               company="Global Healthcare Technology"
               industry="Healthcare"
               challenge="Scaling agile practices across 15 distributed teams in 8 countries."
               result="Successful SAFe implementation with improved alignment and predictability."
+              href="https://scaledagile.com/insights-customer-stories/"
             />
             <CaseStudyCard
               company="E-commerce Startup"
               industry="Technology"
               challenge="Rapid growth requiring better prioritization and delivery cadence."
               result="Implemented Scrum with 3x increase in feature delivery velocity."
+              href="https://resources.scrumalliance.org/"
             />
           </div>
         </section>
@@ -239,31 +255,37 @@ export default function ResourcesPage() {
               title="Scrum: The Art of Doing Twice the Work in Half the Time"
               author="Jeff Sutherland"
               tag="Scrum Fundamentals"
+              href="https://www.amazon.com/Scrum-Doing-Twice-Work-Half/dp/038534645X"
             />
             <BookCard
               title="The Lean Startup"
               author="Eric Ries"
               tag="Product Development"
+              href="https://www.amazon.com/Lean-Startup-Entrepreneurs-Continuous-Innovation/dp/0307887898"
             />
             <BookCard
               title="SAFe 6.0 Distilled"
               author="Richard Knaster & Dean Leffingwell"
               tag="Scaled Agile"
+              href="https://www.amazon.com/SAFe-6-0-Distilled-Achieving-Business/dp/0137682522"
             />
             <BookCard
               title="User Story Mapping"
               author="Jeff Patton"
               tag="Product Management"
+              href="https://www.amazon.com/User-Story-Mapping-Discover-Product/dp/1491904909"
             />
             <BookCard
               title="The Five Dysfunctions of a Team"
               author="Patrick Lencioni"
               tag="Team Building"
+              href="https://www.amazon.com/Five-Dysfunctions-Team-Leadership-Fable/dp/0787960756"
             />
             <BookCard
               title="Coaching Agile Teams"
               author="Lyssa Adkins"
               tag="Agile Coaching"
+              href="https://www.amazon.com/Coaching-Agile-Teams-ScrumMasters-Addison-Wesley/dp/0321637704"
             />
           </div>
         </section>
@@ -354,12 +376,14 @@ function TemplateCard({
   title,
   description,
   format,
+  href,
 }: {
   icon: React.ReactNode;
   badge: string;
   title: string;
   description: string;
   format: string;
+  href:string;
 }) {
   return (
     <div className="bg-white rounded-2xl p-5 flex flex-col justify-between text-md">
@@ -377,10 +401,12 @@ function TemplateCard({
       </div>
       <div className="flex items-center justify-between">
         <span className="text-xs text-gray-500">{format}</span>
-        <button className="inline-flex items-center gap-3 px-3 py-1 rounded-full bg-white text-sm font-medium text-violet-700 border border-violet-400">
+
+        <Link href={href}
+        className="inline-flex items-center gap-3 px-3 py-1 rounded-full bg-white text-sm font-medium text-violet-700 border border-violet-400">
           <LuDownload className="w-4 h-4 font-medium" />
           <span>Download</span>
-        </button>
+        </Link>
       </div>
     </div>
   );
@@ -394,12 +420,14 @@ function GuideCard({
   gradient,
   description,
   action,
+  href,
 }: {
   icon: React.ReactNode;
   title: string;
   gradient: string;
   description: string;
   action: string;
+  href:string;
 }) {
   return (
     <div className="bg-white/80 rounded-3xl p-8 flex gap-5 w-full shadow-sm">
@@ -420,11 +448,11 @@ function GuideCard({
           {description}
         </p>
 
-        {/* BUTTON */}
-        <button className="inline-flex items-center gap-2 px-3 py-1 border border-violet-300 text-violet-600 rounded-full text-sm font-medium hover:bg-purple-50 transition-all w-fit self-start">
+        <Link href={href}
+        className="inline-flex items-center gap-2 px-3 py-1 border border-violet-300 text-violet-700 rounded-full text-sm font-medium hover:bg-purple-50 transition-all w-fit self-start">
             <LuBookOpen className="w-4 h-4" />
             {action}
-        </button>
+        </Link>
       </div>
     </div>
   );
@@ -438,15 +466,18 @@ function VideoCard({
   duration,
   title,
   description,
+  href,
 }: {
   image: string;
   duration: string;
   title: string;
   description: string;
+  href: string;
 }) {
   return (
     <div className="rounded-4xl overflow-hidden bg-white flex flex-col hover:shadow-sm transition-shadow">
       {/* THUMBNAIL */}
+      <Link href={href}>
       <div className="relative w-full h-48">
         {/* Thumbnail Image */}
         <img
@@ -467,6 +498,7 @@ function VideoCard({
           </div>
         </div>
       </div>
+      </Link>
 
       {/* TEXT AREA */}
       <div className="px-6 py-6">
@@ -489,11 +521,13 @@ function CaseStudyCard({
   industry,
   challenge,
   result,
+  href,
 }: {
   company: string;
   industry: string;
   challenge: string;
   result: string;
+  href: string;
 }) {
 return (
     <div className="bg-white rounded-3xl p-8 flex flex-col md:flex-row justify-between gap-8 hover:shadow-sm transition-all">
@@ -539,10 +573,11 @@ return (
 
       {/* BUTTON */}
       <div className="md:self-center">
-        <button className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-purple-300 text-violet-700 bg-white text-sm hover:bg-purple-100 transition">
+        <Link href={href}
+        className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-purple-300 text-violet-700 bg-white text-sm hover:bg-purple-100 transition">
           Read Full Case Study
           <LuExternalLink className="w-4 h-4" />
-        </button>
+        </Link>
       </div>
 
     </div>
@@ -555,13 +590,16 @@ function BookCard({
   title,
   author,
   tag,
+  href,
 }: {
   title: string;
   author: string;
   tag: string;
+  href:string;
 }) {
   return (
     <div className="bg-white rounded-3xl p-6 flex flex-col gap-2">
+      <Link href={href}>
       <div className="flex gap-3">
         <div className="w-12 h-12 rounded-2xl bg-gradient-to-r from-orange-500 to-red-500 text-white flex items-center justify-center shrink-0">
           <LuBookMarked className="w-6 h-6" />
@@ -570,13 +608,13 @@ function BookCard({
           <h3 className="text-md text-gray-900 leading-relaxed">
             {title}
           </h3>
-          <p className="text-sm text-gray-500">by {author}</p>
+          <p className="text-[13px] text-gray-600">by {author}</p>
           <span className="mt-1 inline-flex px-2 py-0.5 rounded-full bg-white text-xs font-medium text-gray-900 border border-violet-200 w-max">
             {tag}
           </span>
         </div>
       </div>
-      
+    </Link>      
     </div>
   );
 }
